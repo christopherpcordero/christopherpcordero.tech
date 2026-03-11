@@ -1,2 +1,0 @@
-# christopherpcordero.tech
-Personal Websites

@@ -1,0 +1,33 @@
+.timeline { position: relative; }
+
+.timeline::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 1px; background: var(--border);
+}
+
+.item {
+  padding-left: 32px; padding-bottom: 48px; position: relative;
+}
+
+.item::before {
+  content: ''; position: absolute; left: -4px; top: 6px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 12px var(--accent2);
+}
+
+.header { margin-bottom: 16px; }
+
+.date   { font-size: 11px; color: var(--accent); letter-spacing: .1em; margin-bottom: 6px; }
+.company { font-family: var(--sans); font-size: 20px; font-weight: 700; margin-bottom: 2px; }
+.role   { font-size: 12px; color: var(--muted); }
+
+.bullets { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+
+.bullets li {
+  color: var(--muted2); font-size: 12px;
+  padding-left: 18px; position: relative; line-height: 1.6;
+}
+
+.bullets li::before {
+  content: '▸'; position: absolute; left: 0; color: var(--accent2);
+}

@@ -1,0 +1,16 @@
+.inner {
+  max-width: 520px; margin: 0 auto; text-align: center;
+}
+
+.sub {
+  color: var(--muted); margin-top: 12px; font-size: 13px;
+}
+
+.links {
+  display: flex; justify-content: center; gap: 12px;
+  flex-wrap: wrap; margin-top: 36px;
+}
+
+.info {
+  color: var(--muted); font-size: 12px; margin-top: 24px; line-height: 2;
+}

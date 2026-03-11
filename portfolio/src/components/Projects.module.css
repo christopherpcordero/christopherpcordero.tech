@@ -1,0 +1,48 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 4px; padding: 28px;
+  display: flex; flex-direction: column; gap: 14px;
+  position: relative; overflow: hidden;
+  transition: border-color .2s, transform .2s;
+}
+
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scaleX(0); transition: transform .3s; transform-origin: left;
+}
+
+.card:hover { border-color: var(--accent2); transform: translateY(-2px); }
+.card:hover::before { transform: scaleX(1); }
+
+.cardHeader {
+  display: flex; justify-content: space-between; align-items: flex-start;
+}
+
+.icon { font-size: 24px; }
+
+.outcome {
+  font-size: 10px; padding: 3px 8px; border-radius: 2px;
+  background: rgba(57,211,83,.08); color: var(--green);
+  border: 1px solid rgba(57,211,83,.15);
+}
+
+.title { font-family: var(--sans); font-size: 17px; font-weight: 700; }
+
+.problem { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.approach { font-size: 12px; color: var(--muted2); line-height: 1.7; }
+
+.tech { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+
+.tag {
+  font-size: 10px; padding: 3px 8px;
+  letter-spacing: .06em; text-transform: uppercase;
+  background: rgba(0,212,255,.06); border: 1px solid rgba(0,212,255,.15);
+  color: var(--accent); border-radius: 2px;
+}

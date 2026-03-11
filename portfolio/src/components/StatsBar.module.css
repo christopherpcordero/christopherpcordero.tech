@@ -1,0 +1,25 @@
+.bar {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--border);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stat {
+  background: var(--surface); padding: 28px 32px; transition: background .2s;
+}
+.stat:hover { background: var(--surface2); }
+
+.num {
+  font-family: var(--sans); font-size: 38px; font-weight: 800;
+  color: var(--accent); line-height: 1; margin-bottom: 4px;
+}
+
+.label {
+  font-size: 11px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .bar { grid-template-columns: repeat(2, 1fr); }
+}

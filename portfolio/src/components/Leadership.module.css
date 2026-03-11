@@ -1,0 +1,48 @@
+.layout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+}
+
+.quote {
+  border-left: 3px solid var(--accent); padding-left: 24px; margin-bottom: 32px;
+}
+.quote p { font-size: 15px; color: var(--text); line-height: 1.7; font-style: italic; }
+.quote cite { font-size: 11px; color: var(--muted); display: block; margin-top: 12px; font-style: normal; letter-spacing: .08em; }
+
+.militaryCard {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 28px;
+}
+.militaryTitle { font-family: var(--sans); font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+.militarySub   { font-size: 12px; color: var(--accent); margin-bottom: 16px; letter-spacing: .05em; }
+.militaryPoints { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.militaryPoints li {
+  font-size: 12px; color: var(--muted2); padding-left: 18px; position: relative; line-height: 1.6;
+}
+.militaryPoints li::before { content: '▸'; position: absolute; left: 0; color: var(--orange); }
+
+.subheading {
+  font-family: var(--sans); font-size: 18px; font-weight: 700; margin-bottom: 16px; color: var(--muted2);
+}
+
+.lStats { display: flex; flex-direction: column; gap: 12px; }
+.lStat  {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 16px 20px;
+}
+.lStatNum   { font-family: var(--sans); font-size: 28px; font-weight: 800; color: var(--accent); min-width: 60px; }
+.lStatLabel { font-size: 12px; color: var(--muted2); }
+
+.frameworksGrid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px;
+}
+.frameworkCard {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 4px;
+  padding: 20px; text-align: center; transition: border-color .2s, transform .2s;
+}
+.frameworkCard:hover { border-color: var(--accent2); transform: translateY(-2px); }
+.frameworkIcon { font-size: 28px; margin-bottom: 10px; }
+.frameworkName { font-family: var(--sans); font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.frameworkDesc { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
